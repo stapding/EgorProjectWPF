@@ -1,0 +1,39 @@
+﻿<Window x:Class="Rus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rus"
+        mc:Ignorable="d"
+        Title="Русь" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Style="{StaticResource black_bg}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="back" Grid.Column="0" Style="{StaticResource button}" Content="Назад" Margin="10,0,10,0" Width="80" Height="30" FontSize="14" Click="Button_Click" Background="White"></Button>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource header_text}" HorizontalAlignment="Left" Text="Р" Foreground="Black"/>
+                <TextBlock Style="{StaticResource header_text}" HorizontalAlignment="Left" Text="УС" Foreground="#FFE6FF00"/>
+                <TextBlock Style="{StaticResource header_text}" HorizontalAlignment="Left" Text="Ь" Foreground="White"/>
+            </StackPanel>
+            <Image Grid.Column="2" x:Name="avatar" Width="50" Height="50" Stretch="Fill"/>
+            <Button x:Name="logout" Grid.Column="3" Style="{StaticResource button}" Content="Корзина" Margin="10,0,10,0" Width="80" Height="30" FontSize="14" Click="Button1_Click"  Background="White"></Button>
+        </Grid>
+        <Grid Grid.Row="2" Style="{StaticResource black_bg}">
+            <TextBlock Foreground="white" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Hyperlink RequestNavigate="requestNavigate" x:Name="link" NavigateUri="https://contract.gosuslugi.ru" Foreground="White" FontSize="20">Служба по контракту</Hyperlink>
+            </TextBlock>
+        </Grid>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" ContentRendered="MainFrame_ContentRendered"/>
+        
+    </Grid>
+</Window>

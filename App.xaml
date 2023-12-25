@@ -1,0 +1,63 @@
+﻿<Application x:Class="Rus.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Rus"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="TextBlock" x:Key="header_text">
+            <Setter Property="Foreground" Value="#FFF"></Setter>
+            <Setter Property="FontSize" Value="38"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="Open Sans Semibold"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="nm_text">
+            <Setter Property="Foreground" Value="#FFB4B4B4"></Setter>
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="text">
+            <Setter Property="Foreground" Value="white"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+        <Style TargetType="Grid" x:Key="black_bg">
+            <Setter Property="Background" Value="#75010f"></Setter>
+        </Style>
+        <Style x:Key="button" TargetType="Button">
+            <Setter Property="Foreground" Value="#75010f"></Setter>
+            <Setter Property="Background" Value="white"></Setter>
+            <Setter Property="BorderBrush" Value="black"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="BorderBrush" Value="black"></Setter>
+                    <Setter Property="BorderThickness" Value="1,1,1,1"></Setter>
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <Style x:Key="menu_button" TargetType="Button" BasedOn="{StaticResource button}">
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Width" Value="300"></Setter>
+            <Setter Property="Height" Value="60"></Setter>
+        </Style>
+
+        <Style x:Key="small_menu_button" TargetType="Button" BasedOn="{StaticResource button}">
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="Foreground" Value="#75010f"></Setter>
+            <Setter Property="Background" Value="white"></Setter>
+            <Setter Property="BorderBrush" Value="black"></Setter>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"></Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+    </Application.Resources>
+</Application>
